@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./App.css";
 
-function App() {
+export default function Stopwatch() {
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -28,9 +27,9 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>⏱ Stopwatch</h1>
-      <h2>{seconds}s</h2>
+    <div style={{ textAlign: "center" }}>
+      <h2>Stopwatch</h2>
+      <h1>{seconds}s</h1>
 
       <button onClick={start}>Start</button>
       <button onClick={stop}>Stop</button>
@@ -38,5 +37,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
